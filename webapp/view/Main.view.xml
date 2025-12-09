@@ -1,6 +1,43 @@
-<mvc:View controllerName="megaacademy.mod2aul2.controller.Main"
+<mvc:View
+    controllerName="megaacademy.mod2aul2.controller.Main"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <Table>
+                <columns>
+                    <Column>
+                        <Text text="Nome" >
+                        </Text>
+                    </Column>
+                    <Column>
+                        <Text text="Altura" >
+                        </Text>
+                    </Column>
+                    <Column>
+                        <Text text="Massa" >
+                        </Text>
+                    </Column>
+                    <Column>
+                        <Text text="Cor dos olhos" >
+                        </Text>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells >
+                            <Label text="{name}"></Label>
+                            <Label text="{height}"></Label>
+                            <Label text="{mass}"></Label>
+                            <Label text="{eye_color}"></Label>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
     </Page>
 </mvc:View>
