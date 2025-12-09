@@ -8,7 +8,7 @@
         title="{i18n>title}"
     >
         <content>
-            <Table>
+            <Table items = "{/results}">
                 <columns>
                     <Column>
                         <Text text="Nome" >
