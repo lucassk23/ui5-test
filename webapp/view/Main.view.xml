@@ -8,36 +8,51 @@
         title="{i18n>title}"
     >
         <content>
-            <Table items = "{/results}">
+            <StepInput
+                id="StepInput"
+                change="onSearchCharacter"
+                visible="{= ${device>/system/desktop} === true ? true : false}"
+            />
+            <Slider
+                class="sapUiMediumMarginBottom"
+                change="onSearchCharacter"
+                visible="{= ${device>/system/phone} === true ? true : false}"
+            />
+
+            <VBox>
+                <Title
+                    text="Detalhamento do persongem selecionado"
+                    class="sapUiMediumMarginTop sapUiMediumMarginBottom sapUiMediumMarginBegin sapUiMediumMarginEnd"
+                />
+                <Label text="{/name}" />
+                <Text text="{/eye_color}" />
+            </VBox>
+            <!-- <Table items="{/results}">
                 <columns>
                     <Column>
-                        <Text text="Nome" >
-                        </Text>
+                        <Text text="Nome" />
                     </Column>
                     <Column>
-                        <Text text="Altura" >
-                        </Text>
+                        <Text text="Altura" />
                     </Column>
                     <Column>
-                        <Text text="Massa" >
-                        </Text>
+                        <Text text="Massa" />
                     </Column>
                     <Column>
-                        <Text text="Cor dos olhos" >
-                        </Text>
+                        <Text text="Cor dos olhos" />
                     </Column>
                 </columns>
                 <items>
                     <ColumnListItem>
-                        <cells >
-                            <Label text="{name}"></Label>
-                            <Label text="{height}"></Label>
-                            <Label text="{mass}"></Label>
-                            <Label text="{eye_color}"></Label>
+                        <cells>
+                            <Label text="{name}" />
+                            <Label text="{height}" />
+                            <Label text="{mass}" />
+                            <Label text="{eye_color}" />
                         </cells>
                     </ColumnListItem>
                 </items>
-            </Table>
+            </Table> -->
         </content>
     </Page>
 </mvc:View>

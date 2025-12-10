@@ -10,6 +10,13 @@ sap.ui.define([
             //let oModelLocal = new JSONModel();
             oModelGlobal.loadData("https://swapi.dev/api/people/");
             //this.getView().setModel(oModelLocal);
+        },
+        onSearchCharacter:function(oEvent){
+            //this.getView().byId("StepInput").getValue();
+            let characterId = oEvent.getParameter("value");
+            this.getOwnerComponent().getModel().loadData("https://swapi.dev/api/people/" + characterId);
+
+
         }
     }
 );
